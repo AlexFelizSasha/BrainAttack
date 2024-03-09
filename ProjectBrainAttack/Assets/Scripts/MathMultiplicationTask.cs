@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,11 @@ public class MathMultiplicationTask
     private int _firstNumber;
     private int _secondNumber;
 
-
     public MathMultiplicationTask(int minNumber, int maxNumber)
     {
-        _firstNumber = Random.Range(minNumber, maxNumber);
+        _firstNumber = UnityEngine.Random.Range(minNumber, maxNumber);
         do
-            _secondNumber = Random.Range(minNumber, maxNumber);
+            _secondNumber = UnityEngine.Random.Range(minNumber, maxNumber);
         while (_secondNumber < 2);
     }
 
@@ -20,8 +20,8 @@ public class MathMultiplicationTask
     public object GetFirstFalseResult() { return FirstFalseResult(); }
     public object GetSecondFalseResult() { return SecondFalseResult(); }
     public object GetThirdFalseResult() { return ThirdFalseResult(); }
-    public object GetFirstNumber() { return _firstNumber; }
-    public object GetSecondNumber() { return _secondNumber; }
+    public object GetFirstTaskObject() { return _firstNumber; }
+    public object GetSecondTaskObject() { return _secondNumber; }
 
     private int FirstFalseResult()
     {

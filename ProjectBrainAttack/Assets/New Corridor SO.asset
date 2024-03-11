@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4433b62363b451d42863c20ca336fe7f, type: 3}
+  m_Name: New Corridor SO
+  m_EditorClassIdentifier: 
+  corridorMath:
+  - {fileID: 9130816405282951258, guid: f8f62a9d907730b4082b4a781cf99aba, type: 3}
+  - {fileID: 9130816405282951258, guid: c2ecc55c564b1524094dbed1b4afbd9b, type: 3}
+  - {fileID: 9130816405282951258, guid: 22a38a9cdbb55ee47a1401493f60c905, type: 3}
+  - {fileID: 9130816405282951258, guid: c398c9bc5d1605645b2335539fc6a758, type: 3}

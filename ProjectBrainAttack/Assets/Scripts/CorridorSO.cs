@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class CorridorSO : ScriptableObject
 {
-    public GameObject[] corridorMath;
+    public List<GameObject> corridorMath;
 
 }

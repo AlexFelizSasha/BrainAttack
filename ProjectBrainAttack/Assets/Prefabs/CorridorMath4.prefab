@@ -312,7 +312,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -446,7 +446,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -921,7 +921,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1495,6 +1495,7 @@ GameObject:
   - component: {fileID: 5696501556681116961}
   - component: {fileID: 1490097037927921842}
   - component: {fileID: 6881507268600238613}
+  - component: {fileID: 672268987059173485}
   m_Layer: 0
   m_Name: CorridorTrigger
   m_TagString: Untagged
@@ -1565,6 +1566,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.541308, z: 1}
   m_Center: {x: 0, y: 0.2706533, z: 0}
+--- !u!114 &672268987059173485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8365479648162437301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e79162f499084f4083ce89a9106ae3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _corridor: {fileID: 9130816405282951258}
 --- !u!1 &8613154612284199651
 GameObject:
   m_ObjectHideFlags: 0

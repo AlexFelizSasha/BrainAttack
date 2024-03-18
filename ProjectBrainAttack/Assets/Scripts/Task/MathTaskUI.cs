@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class MathTaskUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _firstNumberText;
-    [SerializeField] private TextMeshProUGUI _secondNumberText;
+    [SerializeField] private TextMeshProUGUI _taskText;
 
     private void Start()
     {
@@ -15,7 +14,6 @@ public class MathTaskUI : MonoBehaviour
 
     private void TaskFabric_OnTaskCreated(object sender, TaskFabric.OnTaskCreatedEventArgs e)
     {
-        _firstNumberText.text = e.firstTaskObject.ToString();
-        _secondNumberText.text = e.secondTaskObject.ToString();
+        _taskText.text = e.taskObject.ToString();
     }
 }

@@ -20,7 +20,7 @@ public class TestCode : MonoBehaviour
 
     private void TaskFabric_OnTaskCreated(object sender, TaskFabric.OnTaskCreatedEventArgs e)
     {
-        Debug.Log($"Task objects {e.firstTaskObject}, {e.secondTaskObject}");
+        Debug.Log($"Task objects {e.taskObject}");
         
     }
 

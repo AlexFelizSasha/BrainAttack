@@ -10,6 +10,7 @@ public class PlayerCollisions : MonoBehaviour
     {
         string _name = other.gameObject.name;
         TriggerContext _triggerContext = new TriggerContext();
+        
         _triggerContext.CollideWithPlayer(_name);
     }
 }

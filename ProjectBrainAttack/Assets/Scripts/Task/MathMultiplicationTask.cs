@@ -16,26 +16,36 @@ public class MathMultiplicationTask
         while (_secondNumber < 2);
     }
 
-    public object GetTrueResult() { return _firstNumber * _secondNumber; }
-    public object GetFirstFalseResult() { return FirstFalseResult(); }
-    public object GetSecondFalseResult() { return SecondFalseResult(); }
-    public object GetThirdFalseResult() { return ThirdFalseResult(); }
-    public object GetFirstTaskObject() { return _firstNumber; }
-    public object GetSecondTaskObject() { return _secondNumber; }
+    public object GetTrueResult() { return CountTrueResult(); }
+    public object GetFirstFalseResult() { return CountFirstFalseResult(); }
+    public object GetSecondFalseResult() { return CountSecondFalseResult(); }
+    public object GetThirdFalseResult() { return CountThirdFalseResult(); }
+    public object GetTaskObject() { return CreateTaskText(); }
 
-    private int FirstFalseResult()
+    
+    private int CountTrueResult()
+    {
+        return _firstNumber * _secondNumber;
+    }
+    private int CountFirstFalseResult()
     {
         return _firstNumber * (_secondNumber + 1);
     }
-    private int SecondFalseResult()
+    private int CountSecondFalseResult()
     {
         return _firstNumber * (_secondNumber - 1);
     }
-    private int ThirdFalseResult()
+    private int CountThirdFalseResult()
     {
         if (_firstNumber == _secondNumber)
             return _firstNumber * _secondNumber + 4;
         else
             return (_firstNumber + 1) * _secondNumber;
+    }
+
+    private string CreateTaskText()
+    {
+        string _text = $"{_firstNumber} x {_secondNumber}";
+        return _text;
     }
 }

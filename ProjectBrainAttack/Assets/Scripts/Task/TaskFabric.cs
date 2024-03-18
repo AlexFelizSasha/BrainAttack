@@ -10,8 +10,7 @@ public class TaskFabric
 
     public class OnTaskCreatedEventArgs : EventArgs
     {
-        public object firstTaskObject;
-        public object secondTaskObject;
+        public object taskObject;
         public object trueResult;
         public object firstFalseResult;
         public object secondFalseResult;
@@ -22,13 +21,12 @@ public class TaskFabric
         MathMultiplicationTask _mathMultiplicationTask = new MathMultiplicationTask(minNumber, maxNumber);
         OnTaskCreated?.Invoke(this, new OnTaskCreatedEventArgs()
         {
-            firstTaskObject = _mathMultiplicationTask.GetFirstTaskObject(),
-            secondTaskObject = _mathMultiplicationTask.GetSecondTaskObject(),
+            taskObject = _mathMultiplicationTask.GetTaskObject(),
             trueResult = _mathMultiplicationTask.GetTrueResult(),
             firstFalseResult = _mathMultiplicationTask.GetFirstFalseResult(),
             secondFalseResult = _mathMultiplicationTask.GetSecondFalseResult(),
             thirdFalseResult = _mathMultiplicationTask.GetThirdFalseResult()
-        });
+        }) ;
         return _mathMultiplicationTask;
     }
 }

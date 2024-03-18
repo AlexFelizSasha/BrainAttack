@@ -26,6 +26,7 @@ public class TriggerContext
     }
     public void CollideWithPlayer(string name)
     {
+        if (!_playerTriggerContext.ContainsKey(name)) return;
         _playerTriggerContext[name].CollideWithPlayer();
     }
 }

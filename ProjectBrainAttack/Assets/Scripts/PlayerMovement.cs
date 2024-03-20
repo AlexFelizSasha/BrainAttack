@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public static event Action OnPlayerMoves;
 
-    private float _moveSpeed = 5f;
+    private float _moveSpeed = 6f;
     private float _oneStepDistance = 8f;
     private float _maxLeftPosition = 12;
     private float _minRightPosition = -12;

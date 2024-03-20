@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MathMultiplicationTask
+public class MathMultiplicationTask : ITaskable
 {
     private int _firstNumber;
     private int _secondNumber;

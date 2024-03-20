@@ -29,4 +29,17 @@ public class TaskFabric
         }) ;
         return _mathMultiplicationTask;
     }
+    public ColorTask CreateColorTask()
+    {
+        ColorTask _colorTask = new ColorTask();
+        OnTaskCreated?.Invoke(this, new OnTaskCreatedEventArgs()
+        {
+            taskObject = _colorTask.GetTaskObject(),
+            trueResult = _colorTask.GetTrueResult(),
+            firstFalseResult = _colorTask.GetFirstFalseResult(),
+            secondFalseResult = _colorTask.GetSecondFalseResult(),
+            thirdFalseResult = _colorTask.GetThirdFalseResult()
+        });
+        return _colorTask;
+    }
 }

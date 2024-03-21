@@ -11,6 +11,6 @@ public class StartGateTrigger : IPlayerTrigger
     private void CreateTask()
     {
         TaskFabric _taskFabric = new TaskFabric();
-        MathMultiplicationTask _mathMultiplicationTask = _taskFabric.CreateMathMultiplicationTask(1, 10);
+        _taskFabric.CreateTask();
     }
 }

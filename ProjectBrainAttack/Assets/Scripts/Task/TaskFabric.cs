@@ -16,7 +16,12 @@ public class TaskFabric
         public object secondFalseResult;
         public object thirdFalseResult;
     }
-    public MathMultiplicationTask CreateMathMultiplicationTask(int minNumber, int maxNumber)
+
+    public void CreateTask()
+    {
+        ColorTask _colorTask = CreateColorTask();
+    }
+    private MathMultiplicationTask CreateMathMultiplicationTask(int minNumber, int maxNumber)
     {
         MathMultiplicationTask _mathMultiplicationTask = new MathMultiplicationTask(minNumber, maxNumber);
         OnTaskCreated?.Invoke(this, new OnTaskCreatedEventArgs()
@@ -29,16 +34,16 @@ public class TaskFabric
         }) ;
         return _mathMultiplicationTask;
     }
-    public ColorTask CreateColorTask()
+    private ColorTask CreateColorTask()
     {
         ColorTask _colorTask = new ColorTask();
         OnTaskCreated?.Invoke(this, new OnTaskCreatedEventArgs()
         {
-            taskObject = _colorTask.GetTaskObject(),
-            trueResult = _colorTask.GetTrueResult(),
-            firstFalseResult = _colorTask.GetFirstFalseResult(),
-            secondFalseResult = _colorTask.GetSecondFalseResult(),
-            thirdFalseResult = _colorTask.GetThirdFalseResult()
+            taskObject = (Color)_colorTask.GetTaskObject(),
+            trueResult = (Color)_colorTask.GetTrueResult(),
+            firstFalseResult = (Color)_colorTask.GetFirstFalseResult(),
+            secondFalseResult = (Color)_colorTask.GetSecondFalseResult(),
+            thirdFalseResult = (Color)_colorTask.GetThirdFalseResult()
         });
         return _colorTask;
     }

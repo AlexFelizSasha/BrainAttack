@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColorContext
 {
-    private Dictionary<int, string> _colors = new Dictionary<int, string>();
+    private Dictionary<int, Color> _colors = new Dictionary<int, Color>();
 
     private const string RED = "red";
     private const string WHITE = "white";
@@ -15,15 +15,27 @@ public class ColorContext
 
     public ColorContext()
     {
-        _colors.Add(0, RED);
-        _colors.Add(1, WHITE);
-        _colors.Add(2, GREEN);
-        _colors.Add(3, BLACK);
-        _colors.Add(4, YELLOW);
-        _colors.Add(5, BLUE);
+        _colors.Add(0, Color.red);
+        _colors.Add(1, Color.white);
+        _colors.Add(2, Color.green);
+        _colors.Add(3, Color.black);
+        _colors.Add(4, Color.yellow);
+        _colors.Add(5, Color.blue);
+    }
+    public Dictionary<Color, string> GetColorNameDictionary()
+    {
+        Dictionary<Color, string> _colorNames = new Dictionary<Color, string>();
+        _colorNames.Add(_colors[0], RED);
+        _colorNames.Add(_colors[1], WHITE);
+        _colorNames.Add(_colors[2], GREEN);
+        _colorNames.Add(_colors[3], BLACK);
+        _colorNames.Add(_colors[4], YELLOW);
+        _colorNames.Add(_colors[5], BLUE);
+
+        return _colorNames;
     }
 
-    public string GetColor(int color)
+    public Color GetColor(int color)
     {
         return _colors[color];
     }
@@ -31,10 +43,5 @@ public class ColorContext
     public int GetColorsCount()
     {
         return _colors.Count;
-    }
-    public Dictionary<int, string> GetFalseColors(int trueColorIndex)
-    {
-        _colors.Remove(trueColorIndex);
-        return _colors;
     }
 }

@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4433b62363b451d42863c20ca336fe7f, type: 3}
   m_Name: New Corridor SO
   m_EditorClassIdentifier: 
-  corridorMath:
+  corridorMathMultiplication:
   - {fileID: 9130816405282951258, guid: f8f62a9d907730b4082b4a781cf99aba, type: 3}
   - {fileID: 9130816405282951258, guid: c2ecc55c564b1524094dbed1b4afbd9b, type: 3}
   - {fileID: 9130816405282951258, guid: 22a38a9cdbb55ee47a1401493f60c905, type: 3}
   - {fileID: 9130816405282951258, guid: c398c9bc5d1605645b2335539fc6a758, type: 3}
+  corridorColor:
+  - {fileID: 9130816405282951258, guid: 28cdf34bfafb6d144850fd1eefc17932, type: 3}
+  - {fileID: 9130816405282951258, guid: b3119a99b528956499e69eb87c8b0c50, type: 3}
+  - {fileID: 9130816405282951258, guid: 4b35ddda184ef3f47be7634993c04ef7, type: 3}
+  - {fileID: 9130816405282951258, guid: 5ec7b989ae81e174c96bfc769e892a70, type: 3}

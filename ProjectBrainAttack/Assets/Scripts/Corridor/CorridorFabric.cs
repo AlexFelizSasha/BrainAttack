@@ -14,17 +14,18 @@ public class CorridorFabric : MonoBehaviour
 
     private void Start()
     {
-        CorridorTrigger.OnCreateCorridor += CorridorTrigger_OnCreateCorridor;
+        CorridorTrigger.OnCreateCorridor += HandleCorridorCreating;
 
-        _corridorList = _corridorPool.InitializePoolFromList(_corridorSO.corridorMath, _corridorPoolSize);
+        //_corridorList = _corridorPool.InitializePoolFromList(_corridorSO.corridorMathMultiplication, _corridorPoolSize);
+        _corridorList = _corridorPool.InitializePoolFromList(_corridorSO.corridorColor, _corridorPoolSize);
     }
 
     private void OnDisable()
     {
-        CorridorTrigger.OnCreateCorridor -= CorridorTrigger_OnCreateCorridor;
+        CorridorTrigger.OnCreateCorridor -= HandleCorridorCreating;
     }
 
-    private void CorridorTrigger_OnCreateCorridor()
+    private void HandleCorridorCreating()
     {
         GameObject _corridor = _corridorPool.GetPooledObject(_corridorList);
         _corridor.SetActive(true);

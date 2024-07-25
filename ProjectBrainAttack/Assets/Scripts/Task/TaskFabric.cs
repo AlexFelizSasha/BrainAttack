@@ -19,7 +19,8 @@ public class TaskFabric
 
     public void CreateTask()
     {
-        ColorTask _colorTask = CreateColorTask();
+        //ColorTask _colorTask = CreateColorTask();
+        MathMultiplicationTask _mathTask = CreateMathMultiplicationTask(1, 9);
     }
     private MathMultiplicationTask CreateMathMultiplicationTask(int minNumber, int maxNumber)
     {

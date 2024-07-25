@@ -19,6 +19,7 @@ public class CorridorMover : MonoBehaviour
     {
         float _speed = speed*Time.deltaTime;
         Vector3 _nextPosition = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
+        //Debug.Log("Corridor speed " + _speed);
 
         transform.position = Vector3.MoveTowards(transform.position, _nextPosition, _speed);
     }

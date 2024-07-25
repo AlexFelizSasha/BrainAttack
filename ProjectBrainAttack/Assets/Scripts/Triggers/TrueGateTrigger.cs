@@ -11,7 +11,7 @@ public class TrueGateTrigger : IPlayerTrigger
     {
         OnTaskAmountAdd?.Invoke();
         OnScoreAdd?.Invoke();
-        CreateTask();
+        //CreateTask();
     }
     private void CreateTask()
     {

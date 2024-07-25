@@ -13,6 +13,7 @@ public class TriggerContext
     private const string START_GATE = "StartGate";
     private const string CORRIDOR_TRIGGER = "CorridorTrigger";
     private const string TASK_UI_TRIGGER = "TaskUITrigger";
+    private const string TASK_TRIGGER = "TaskTrigger";
 
     public TriggerContext()
     {
@@ -23,6 +24,7 @@ public class TriggerContext
         _playerTriggerContext.Add(START_GATE, new StartGateTrigger());
         _playerTriggerContext.Add(CORRIDOR_TRIGGER, new CorridorTrigger());
         _playerTriggerContext.Add(TASK_UI_TRIGGER, new TaskUItrigger());
+        _playerTriggerContext.Add(TASK_TRIGGER, new TaskTrigger());
     }
     public void CollideWithPlayer(string name)
     {

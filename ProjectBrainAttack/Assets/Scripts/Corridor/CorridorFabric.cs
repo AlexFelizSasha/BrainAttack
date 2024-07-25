@@ -8,7 +8,8 @@ public class CorridorFabric : MonoBehaviour
     private readonly Vector3 _corridorTransform = new Vector3(180, 0, 0);
     [SerializeField] private CorridorSO _corridorSO;
     [SerializeField] private MyObjectPool _corridorPool;
-    private List<GameObject> _corridorList;
+    private List<GameObject> _corridorColorList;
+    private List<GameObject> _corridorMathList;
     private int _corridorPoolSize = 2;
 
 
@@ -16,8 +17,8 @@ public class CorridorFabric : MonoBehaviour
     {
         CorridorTrigger.OnCreateCorridor += HandleCorridorCreating;
 
-        //_corridorList = _corridorPool.InitializePoolFromList(_corridorSO.corridorMathMultiplication, _corridorPoolSize);
-        _corridorList = _corridorPool.InitializePoolFromList(_corridorSO.corridorColor, _corridorPoolSize);
+        _corridorMathList = _corridorPool.InitializePoolFromList(_corridorSO.corridorMathMultiplication, _corridorPoolSize);
+        _corridorColorList = _corridorPool.InitializePoolFromList(_corridorSO.corridorColor, _corridorPoolSize);
     }
 
     private void OnDisable()
@@ -27,9 +28,14 @@ public class CorridorFabric : MonoBehaviour
 
     private void HandleCorridorCreating()
     {
-        GameObject _corridor = _corridorPool.GetPooledObject(_corridorList);
+        CreateCorridor(_corridorMathList);
+        Debug.Log("CorridorCreated");
+    }
+    private void CreateCorridor(List<GameObject> corridorList)
+    {
+        GameObject _corridor = _corridorPool.GetPooledObject(corridorList);
         _corridor.SetActive(true);
         _corridor.transform.position = _corridorTransform;
-        Debug.Log("CorridorCreated");
+        GateCover _gateCover = _corridor.GetComponent<GateCover>();
     }
 }
